@@ -27,6 +27,7 @@
                         accentTeal: '#0D9488',   /* Calm Teal highlight */
                         accentBlue: '#2563EB',   /* Soft Indigo highlight */
                         accentOrange: '#E97627', /* Tableau Orange accent */
+                        accentKaggle: '#20BEFF', /* Kaggle Cyan accent */
                     }
                 }
             }
@@ -119,7 +120,7 @@
                         I am a Data Professional with a solid Mathematics background and hands-on experience in data analysis, statistical modeling, machine learning, and business intelligence.
                     </p>
                     <p>
-                        I hold a **Master's degree in Mathematics with a specialization in Data Science** as well as a **Bachelor's degree in Mathematics**. I focus on bridging complex quantitative analysis with practical business strategy—building data pipelines, exploratory data analysis workflows, predictive models, and interactive visual dashboards.
+                        I hold a <strong class="text-calmPrimary font-semibold">Master's degree in Mathematics with a specialization in Data Science</strong>. I focus on bridging complex quantitative analysis with practical business strategy by building data pipelines, exploratory data analysis workflows, predictive models, and interactive visual dashboards.
                     </p>
                 </div>
             </div>
@@ -179,63 +180,129 @@
 
         <!-- Projects Section -->
         <section id="projects" class="max-w-6xl mx-auto px-6 mb-24 fade-in-up">
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10">
-                <div>
-                    <h2 class="text-2xl font-bold text-calmPrimary tracking-tight mb-2">Featured Research & Projects</h2>
-                    <p class="text-sm text-calmText">End-to-end data science models, quantitative analysis, and machine learning pipelines.</p>
+            <div class="mb-10">
+                <h2 class="text-2xl font-bold text-calmPrimary tracking-tight mb-2">Featured Projects & Research</h2>
+                <p class="text-sm text-calmText">Categorized showcase of data analysis, dashboards, machine learning, and statistical research.</p>
+            </div>
+
+            <!-- Subcategory 1: Data Science Projects -->
+            <div class="mb-16">
+                <div class="flex items-center gap-3 mb-6 pb-2 border-b border-calmBorder">
+                    <i class="fa-solid fa-brain text-accentTeal"></i>
+                    <h3 class="text-xl font-bold text-calmPrimary">Data Science Projects</h3>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- DS Project 1 -->
+                    <div class="bg-calmCard border border-calmBorder rounded-2xl overflow-hidden shadow-sm hover:shadow-lg hover:border-teal-300 transition flex flex-col justify-between">
+                        <div>
+                            <!-- Custom Image Container -->
+                            <div class="w-full h-48 bg-slate-100 overflow-hidden border-b border-calmBorder relative group">
+                                <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80" alt="Early Preeclampsia Detection Preview" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                            </div>
+                            <div class="p-6">
+                                <div class="flex justify-between items-center mb-3">
+                                    <span class="text-xs font-bold text-accentTeal uppercase tracking-wider bg-teal-50 px-2.5 py-1 rounded">Graduate Thesis</span>
+                                    <span class="text-xs text-slate-400">2024 - 2025</span>
+                                </div>
+                                <h4 class="text-xl font-bold text-calmPrimary mb-3 hover:text-accentTeal transition">
+                                    Early Preeclampsia Detection Using XGBoost-Cox Proportional Hazard
+                                </h4>
+                                <p class="text-sm text-calmText mb-6 leading-relaxed">
+                                    Developed a hybrid machine learning survival analysis model combining XGBoost with Cox Proportional Hazard (XGB-Cox) to predict first-trimester preeclampsia risk, outperforming baseline Cox-PH models (C-index 0.8908 vs. 0.7548). Conducted sensitivity analysis on censoring proportions.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="px-6 pb-6">
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="px-2 py-1 text-xs bg-slate-100 text-slate-600 rounded">R (survival, XGBoost)</span>
+                                <span class="px-2 py-1 text-xs bg-slate-100 text-slate-600 rounded">Excel</span>
+                                <span class="px-2 py-1 text-xs bg-slate-100 text-slate-600 rounded">Survival Analysis</span>
+                            </div>
+                            <a href="https://github.com/arwisyah/xgb_cox_preeclampsia" target="_blank" class="inline-flex items-center text-sm font-semibold text-accentTeal hover:text-teal-700 transition gap-2">
+                                View GitHub Code <i class="fa-solid fa-arrow-right text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- DS Project 2 -->
+                    <div class="bg-calmCard border border-calmBorder rounded-2xl overflow-hidden shadow-sm hover:shadow-lg hover:border-teal-300 transition flex flex-col justify-between">
+                        <div>
+                            <!-- Custom Image Container -->
+                            <div class="w-full h-48 bg-slate-100 overflow-hidden border-b border-calmBorder relative group">
+                                <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80" alt="Arabic OCR Preview" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                            </div>
+                            <div class="p-6">
+                                <div class="flex justify-between items-center mb-3">
+                                    <span class="text-xs font-bold text-accentBlue uppercase tracking-wider bg-blue-50 px-2.5 py-1 rounded">Undergraduate Thesis</span>
+                                    <span class="text-xs text-slate-400">2017 - 2018</span>
+                                </div>
+                                <h4 class="text-xl font-bold text-calmPrimary mb-3 hover:text-accentBlue transition">
+                                    Handwritten Arabic Character Recognition via KPCA & SVM
+                                </h4>
+                                <p class="text-sm text-calmText mb-6 leading-relaxed">
+                                    Engineered an OCR pipeline for handwritten Hijaiyah characters combining Kernel Principal Component Analysis (KPCA) for feature dimensionality reduction and Support Vector Machines (SVM) for classification, achieving 76% accuracy after systematic hyperparameter tuning.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="px-6 pb-6">
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="px-2 py-1 text-xs bg-slate-100 text-slate-600 rounded">MATLAB</span>
+                                <span class="px-2 py-1 text-xs bg-slate-100 text-slate-600 rounded">Computer Vision / OCR</span>
+                                <span class="px-2 py-1 text-xs bg-slate-100 text-slate-600 rounded">SVM</span>
+                            </div>
+                            <a href="https://github.com/arwisyah/KPCA-and-SVM" target="_blank" class="inline-flex items-center text-sm font-semibold text-accentBlue hover:text-blue-700 transition gap-2">
+                                View GitHub Code <i class="fa-solid fa-arrow-right text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- Project Card 1 -->
-                <div class="bg-calmCard border border-calmBorder rounded-2xl p-6 shadow-sm hover:shadow-lg hover:border-teal-300 transition flex flex-col justify-between">
-                    <div>
-                        <div class="flex justify-between items-center mb-4">
-                            <span class="text-xs font-bold text-accentTeal uppercase tracking-wider bg-teal-50 px-2.5 py-1 rounded">Postgraduate Thesis</span>
-                            <span class="text-xs text-slate-400">2024 - 2025</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-calmPrimary mb-3 hover:text-accentTeal transition">
-                            Early Preeclampsia Detection Using XGBoost-Cox Proportional Hazard
-                        </h3>
-                        <p class="text-sm text-calmText mb-6 leading-relaxed">
-                            Developed a hybrid machine learning survival analysis model combining XGBoost with Cox Proportional Hazard (XGB-Cox) to predict first-trimester preeclampsia risk, outperforming baseline Cox-PH models (C-index 0.8908 vs. 0.7548). Conducted sensitivity analysis on censoring proportions.
-                        </p>
-                    </div>
-                    <div>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="px-2 py-1 text-xs bg-slate-100 text-slate-600 rounded">R (survival, XGBoost)</span>
-                            <span class="px-2 py-1 text-xs bg-slate-100 text-slate-600 rounded">Excel</span>
-                            <span class="px-2 py-1 text-xs bg-slate-100 text-slate-600 rounded">Survival Analysis</span>
-                        </div>
-                        <a href="https://github.com/arwisyah/xgb_cox_preeclampsia" target="_blank" class="inline-flex items-center text-sm font-semibold text-accentTeal hover:text-teal-700 transition gap-2">
-                            View GitHub Code <i class="fa-solid fa-arrow-right text-xs"></i>
-                        </a>
-                    </div>
+            <!-- Subcategory 2: Data Analyst Projects -->
+            <div>
+                <div class="flex items-center gap-3 mb-6 pb-2 border-b border-calmBorder">
+                    <i class="fa-solid fa-chart-line text-accentOrange"></i>
+                    <h3 class="text-xl font-bold text-calmPrimary">Data Analyst Projects</h3>
                 </div>
 
-                <!-- Project Card 2 -->
-                <div class="bg-calmCard border border-calmBorder rounded-2xl p-6 shadow-sm hover:shadow-lg hover:border-teal-300 transition flex flex-col justify-between">
-                    <div>
-                        <div class="flex justify-between items-center mb-4">
-                            <span class="text-xs font-bold text-accentBlue uppercase tracking-wider bg-blue-50 px-2.5 py-1 rounded">Undergraduate Research</span>
-                            <span class="text-xs text-slate-400">2017 - 2018</span>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- DA Project 1 -->
+                    <div class="bg-calmCard border border-calmBorder rounded-2xl overflow-hidden shadow-sm hover:shadow-lg hover:border-orange-300 transition flex flex-col justify-between">
+                        <div>
+                            <!-- Custom Image Container -->
+                            <div class="w-full h-48 bg-slate-100 overflow-hidden border-b border-calmBorder relative group">
+                                <img src="https://images.unsplash.com/photo-1485965120184-e220f721d03e?auto=format&fit=crop&w=800&q=80" alt="Cyclistic Bike Share Analysis Preview" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                            </div>
+                            <div class="p-6">
+                                <div class="flex justify-between items-center mb-3">
+                                    <span class="text-xs font-bold text-accentOrange uppercase tracking-wider bg-orange-50 px-2.5 py-1 rounded">Case Study</span>
+                                    <span class="text-xs text-slate-400">2021</span>
+                                </div>
+                                <h4 class="text-xl font-bold text-calmPrimary mb-3 hover:text-accentOrange transition">
+                                    Cyclistic Bike Share Trip Data Analysis
+                                </h4>
+                                <p class="text-sm text-calmText mb-6 leading-relaxed">
+                                    Analyzed historical trip data to uncover distinct usage patterns between casual riders and annual members. Formulated data-backed marketing strategies aimed at converting casual riders into long-term subscribers and visualized key trends in an interactive Tableau dashboard.
+                                </p>
+                            </div>
                         </div>
-                        <h3 class="text-xl font-bold text-calmPrimary mb-3 hover:text-accentBlue transition">
-                            Handwritten Arabic Character Recognition via KPCA & SVM
-                        </h3>
-                        <p class="text-sm text-calmText mb-6 leading-relaxed">
-                            Engineered an OCR pipeline for handwritten Hijaiyah characters combining Kernel Principal Component Analysis (KPCA) for feature dimensionality reduction and Support Vector Machines (SVM) for classification, achieving 76% accuracy after systematic hyperparameter tuning.
-                        </p>
-                    </div>
-                    <div>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="px-2 py-1 text-xs bg-slate-100 text-slate-600 rounded">MATLAB</span>
-                            <span class="px-2 py-1 text-xs bg-slate-100 text-slate-600 rounded">Computer Vision / OCR</span>
-                            <span class="px-2 py-1 text-xs bg-slate-100 text-slate-600 rounded">SVM</span>
+                        <div class="px-6 pb-6">
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="px-2 py-1 text-xs bg-slate-100 text-slate-600 rounded">R</span>
+                                <span class="px-2 py-1 text-xs bg-slate-100 text-slate-600 rounded">Tableau</span>
+                                <span class="px-2 py-1 text-xs bg-slate-100 text-slate-600 rounded">EDA</span>
+                                <span class="px-2 py-1 text-xs bg-slate-100 text-slate-600 rounded">Data Visualization</span>
+                            </div>
+                            <div class="flex flex-wrap gap-4 pt-2 border-t border-slate-100">
+                                <a href="https://www.kaggle.com/code/arwisyah/cyclistic-bike-share-trip-data-analysis" target="_blank" class="inline-flex items-center text-xs font-semibold text-sky-500 hover:text-sky-700 transition gap-1.5">
+                                    <i class="fa-brands fa-kaggle text-sm"></i> Kaggle Notebook
+                                </a>
+                                <a href="https://public.tableau.com/app/profile/arya.wira.syahdwinata/viz/CyclisticBikeShareTrip2021/Dashboard1" target="_blank" class="inline-flex items-center text-xs font-semibold text-accentOrange hover:text-orange-700 transition gap-1.5">
+                                    <i class="fa-solid fa-chart-pie text-sm"></i> Tableau Dashboard
+                                </a>
+                            </div>
                         </div>
-                        <a href="https://github.com/arwisyah/KPCA-and-SVM" target="_blank" class="inline-flex items-center text-sm font-semibold text-accentBlue hover:text-blue-700 transition gap-2">
-                            View GitHub Code <i class="fa-solid fa-arrow-right text-xs"></i>
-                        </a>
                     </div>
                 </div>
             </div>
