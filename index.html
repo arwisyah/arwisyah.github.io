@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arya Wira Syahdwinata | Data Analyst & Data Scientist</title>
+    
+    <!-- Custom Favicon / Tab Icon -->
+    <link rel="icon" type="image/png" href="assets/Web_Icon.png">
+    
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <script>
         tailwind.config = {
@@ -34,23 +38,39 @@
         }
     </script>
     <style>
-        /* Fade-in & Slide Animation Classes */
-        .fade-in-up {
+        /* Sophisticated Multi-Directional Scroll Animations */
+        .reveal-up {
             opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+            transform: translateY(35px) scale(0.97);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            will-change: opacity, transform;
         }
-        .fade-in-up.visible {
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-40px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            will-change: opacity, transform;
+        }
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(40px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            will-change: opacity, transform;
+        }
+        
+        /* Active State when element is in viewport */
+        .reveal-active {
             opacity: 1;
-            transform: translateY(0);
+            transform: translateY(0) translateX(0) scale(1);
         }
-        /* Soft Ambient Gradient Blob Animation */
+
+        /* Ambient Floating Gradient Blobs */
         @keyframes float {
             0%, 100% { transform: translateY(0px) scale(1); }
-            50% { transform: translateY(-15px) scale(1.03); }
+            50% { transform: translateY(-20px) scale(1.05); }
         }
         .animate-float {
-            animation: float 8s ease-in-out infinite;
+            animation: float 9s ease-in-out infinite;
         }
     </style>
 </head>
@@ -82,7 +102,7 @@
 
     <main class="pt-28 pb-16">
         <!-- Hero Section -->
-        <section class="max-w-6xl mx-auto px-6 py-16 md:py-20 flex flex-col items-start fade-in-up">
+        <section class="max-w-6xl mx-auto px-6 py-16 md:py-20 flex flex-col items-start reveal-up">
             <span class="inline-block px-3 py-1 text-xs font-semibold tracking-wider text-accentTeal bg-teal-50 border border-teal-200/60 rounded-full mb-6">
                 DATA ANALYST & DATA SCIENTIST
             </span>
@@ -103,13 +123,13 @@
         </section>
 
         <!-- About Section -->
-        <section id="about" class="max-w-6xl mx-auto px-6 mb-24 fade-in-up">
+        <section id="about" class="max-w-6xl mx-auto px-6 mb-24 reveal-up">
             <div class="grid md:grid-cols-3 gap-8 items-start">
-                <div>
+                <div class="reveal-left">
                     <h2 class="text-2xl font-bold text-calmPrimary tracking-tight mb-2">About Me</h2>
                     <p class="text-sm text-accentTeal font-semibold uppercase tracking-wider">Mathematical Foundation & Analytics</p>
                 </div>
-                <div class="md:col-span-2 space-y-4 text-calmText leading-relaxed">
+                <div class="md:col-span-2 space-y-4 text-calmText leading-relaxed reveal-right">
                     <p>
                         I am a Data Professional with a solid Mathematics background and hands-on experience in data analysis, statistical modeling, machine learning, and business intelligence.
                     </p>
@@ -121,14 +141,14 @@
         </section>
 
         <!-- Skills Section -->
-        <section id="skills" class="max-w-6xl mx-auto px-6 mb-24 fade-in-up">
+        <section id="skills" class="max-w-6xl mx-auto px-6 mb-24 reveal-up">
             <div class="mb-10">
                 <h2 class="text-2xl font-bold text-calmPrimary tracking-tight mb-2">Tech Stack & Core Competencies</h2>
                 <p class="text-sm text-calmText">Technical tools, languages, and domain specializations.</p>
             </div>
             <div class="grid md:grid-cols-3 gap-6">
                 <!-- Skill Card 1 -->
-                <div class="p-6 bg-calmCard border border-calmBorder rounded-xl shadow-sm hover:shadow-md hover:border-teal-300 transition group">
+                <div class="p-6 bg-calmCard border border-calmBorder rounded-xl shadow-sm hover:shadow-md hover:border-teal-300 transition group reveal-left">
                     <div class="w-10 h-10 flex items-center justify-center bg-teal-50 text-accentTeal rounded-lg mb-4 group-hover:bg-accentTeal group-hover:text-white transition">
                         <i class="fa-solid fa-code text-lg"></i>
                     </div>
@@ -142,7 +162,7 @@
                     </div>
                 </div>
                 <!-- Skill Card 2 -->
-                <div class="p-6 bg-calmCard border border-calmBorder rounded-xl shadow-sm hover:shadow-md hover:border-teal-300 transition group">
+                <div class="p-6 bg-calmCard border border-calmBorder rounded-xl shadow-sm hover:shadow-md hover:border-teal-300 transition group reveal-up">
                     <div class="w-10 h-10 flex items-center justify-center bg-orange-50 text-accentOrange rounded-lg mb-4 group-hover:bg-accentOrange group-hover:text-white transition">
                         <i class="fa-solid fa-chart-column text-lg"></i>
                     </div>
@@ -156,7 +176,7 @@
                     </div>
                 </div>
                 <!-- Skill Card 3 -->
-                <div class="p-6 bg-calmCard border border-calmBorder rounded-xl shadow-sm hover:shadow-md hover:border-teal-300 transition group">
+                <div class="p-6 bg-calmCard border border-calmBorder rounded-xl shadow-sm hover:shadow-md hover:border-teal-300 transition group reveal-right">
                     <div class="w-10 h-10 flex items-center justify-center bg-blue-50 text-accentBlue rounded-lg mb-4 group-hover:bg-accentBlue group-hover:text-white transition">
                         <i class="fa-solid fa-brain text-lg"></i>
                     </div>
@@ -173,7 +193,7 @@
         </section>
 
         <!-- Projects Section -->
-        <section id="projects" class="max-w-6xl mx-auto px-6 mb-24 fade-in-up">
+        <section id="projects" class="max-w-6xl mx-auto px-6 mb-24 reveal-up">
             <div class="mb-10">
                 <h2 class="text-2xl font-bold text-calmPrimary tracking-tight mb-2">Featured Projects & Research</h2>
                 <p class="text-sm text-calmText">Categorized showcase of data analysis, dashboards, machine learning, and statistical research.</p>
@@ -188,7 +208,7 @@
 
                 <div class="grid md:grid-cols-2 gap-8">
                     <!-- DS Project 1 -->
-                    <div class="bg-calmCard border border-calmBorder rounded-2xl overflow-hidden shadow-sm hover:shadow-lg hover:border-teal-300 transition flex flex-col justify-between">
+                    <div class="bg-calmCard border border-calmBorder rounded-2xl overflow-hidden shadow-sm hover:shadow-lg hover:border-teal-300 transition flex flex-col justify-between reveal-left">
                         <div>
                             <!-- Custom Image Container -->
                             <div class="w-full h-48 bg-slate-100 overflow-hidden border-b border-calmBorder relative group">
@@ -220,7 +240,7 @@
                     </div>
 
                     <!-- DS Project 2 -->
-                    <div class="bg-calmCard border border-calmBorder rounded-2xl overflow-hidden shadow-sm hover:shadow-lg hover:border-teal-300 transition flex flex-col justify-between">
+                    <div class="bg-calmCard border border-calmBorder rounded-2xl overflow-hidden shadow-sm hover:shadow-lg hover:border-teal-300 transition flex flex-col justify-between reveal-right">
                         <div>
                             <!-- Custom Image Container -->
                             <div class="w-full h-48 bg-slate-100 overflow-hidden border-b border-calmBorder relative group">
@@ -262,7 +282,7 @@
 
                 <div class="grid md:grid-cols-2 gap-8">
                     <!-- DA Project 1 -->
-                    <div class="bg-calmCard border border-calmBorder rounded-2xl overflow-hidden shadow-sm hover:shadow-lg hover:border-orange-300 transition flex flex-col justify-between">
+                    <div class="bg-calmCard border border-calmBorder rounded-2xl overflow-hidden shadow-sm hover:shadow-lg hover:border-orange-300 transition flex flex-col justify-between reveal-up">
                         <div>
                             <!-- Custom Image Container -->
                             <div class="w-full h-48 bg-slate-100 overflow-hidden border-b border-calmBorder relative group">
@@ -303,14 +323,14 @@
         </section>
 
         <!-- Certifications Section -->
-        <section id="certifications" class="max-w-6xl mx-auto px-6 mb-24 fade-in-up">
+        <section id="certifications" class="max-w-6xl mx-auto px-6 mb-24 reveal-up">
             <div class="mb-10">
                 <h2 class="text-2xl font-bold text-calmPrimary tracking-tight mb-2">Professional Certifications</h2>
                 <p class="text-sm text-calmText">Industry-recognized credentials in analytics and data science. Click any card to view credential.</p>
             </div>
             <div class="grid md:grid-cols-3 gap-6">
                 <!-- Cert 1 -->
-                <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/GMCF5S6CQG5M" target="_blank" class="p-6 bg-calmCard border border-calmBorder rounded-xl shadow-sm hover:border-teal-400 hover:shadow-md transition block group">
+                <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/GMCF5S6CQG5M" target="_blank" class="p-6 bg-calmCard border border-calmBorder rounded-xl shadow-sm hover:border-teal-400 hover:shadow-md transition block group reveal-left">
                     <div class="flex justify-between items-start mb-4">
                         <div class="w-10 h-10 flex items-center justify-center bg-blue-50 text-accentBlue rounded-lg group-hover:bg-accentBlue group-hover:text-white transition">
                             <i class="fa-solid fa-certificate text-lg"></i>
@@ -323,7 +343,7 @@
                 </a>
 
                 <!-- Cert 2 -->
-                <a href="https://drive.google.com/file/d/12Y4DjGteQoweROtzgOKVKw53jCiPjpKg/view" target="_blank" class="p-6 bg-calmCard border border-calmBorder rounded-xl shadow-sm hover:border-teal-400 hover:shadow-md transition block group">
+                <a href="https://drive.google.com/file/d/12Y4DjGteQoweROtzgOKVKw53jCiPjpKg/view" target="_blank" class="p-6 bg-calmCard border border-calmBorder rounded-xl shadow-sm hover:border-teal-400 hover:shadow-md transition block group reveal-up">
                     <div class="flex justify-between items-start mb-4">
                         <div class="w-10 h-10 flex items-center justify-center bg-teal-50 text-accentTeal rounded-lg group-hover:bg-accentTeal group-hover:text-white transition">
                             <i class="fa-solid fa-award text-lg"></i>
@@ -336,7 +356,7 @@
                 </a>
 
                 <!-- Cert 3 -->
-                <a href="https://drive.google.com/file/d/1T5HX-ysVvywGvJfiQXAbC6kpxH43-ill/view" target="_blank" class="p-6 bg-calmCard border border-calmBorder rounded-xl shadow-sm hover:border-teal-400 hover:shadow-md transition block group">
+                <a href="https://drive.google.com/file/d/1T5HX-ysVvywGvJfiQXAbC6kpxH43-ill/view" target="_blank" class="p-6 bg-calmCard border border-calmBorder rounded-xl shadow-sm hover:border-teal-400 hover:shadow-md transition block group reveal-right">
                     <div class="flex justify-between items-start mb-4">
                         <div class="w-10 h-10 flex items-center justify-center bg-purple-50 text-purple-600 rounded-lg group-hover:bg-purple-600 group-hover:text-white transition">
                             <i class="fa-solid fa-brain text-lg"></i>
@@ -351,12 +371,12 @@
         </section>
 
         <!-- Publications Section -->
-        <section id="publications" class="max-w-6xl mx-auto px-6 mb-24 fade-in-up">
+        <section id="publications" class="max-w-6xl mx-auto px-6 mb-24 reveal-up">
             <div class="mb-8">
                 <h2 class="text-2xl font-bold text-calmPrimary tracking-tight mb-2">Scientific Publications</h2>
                 <p class="text-sm text-calmText">Peer-reviewed statistical & data science research.</p>
             </div>
-            <div class="bg-calmCard border border-calmBorder rounded-xl p-6 shadow-sm">
+            <div class="bg-calmCard border border-calmBorder rounded-xl p-6 shadow-sm reveal-up">
                 <div class="flex flex-col md:flex-row justify-between md:items-center gap-4">
                     <div>
                         <span class="text-xs font-semibold text-accentTeal bg-teal-50 px-2.5 py-0.5 rounded">IJSA Published (2025)</span>
@@ -375,13 +395,13 @@
         </section>
 
         <!-- Experience Section -->
-        <section id="experience" class="max-w-6xl mx-auto px-6 mb-24 fade-in-up">
+        <section id="experience" class="max-w-6xl mx-auto px-6 mb-24 reveal-up">
             <div class="mb-10">
                 <h2 class="text-2xl font-bold text-calmPrimary tracking-tight mb-2">Applied Experience</h2>
                 <p class="text-sm text-calmText">Practical analytics, operational optimization, and technical solutions.</p>
             </div>
             
-            <div class="border-l-2 border-calmBorder pl-6 space-y-8 ml-2">
+            <div class="border-l-2 border-calmBorder pl-6 space-y-8 ml-2 reveal-left">
                 <div class="relative">
                     <div class="absolute -left-[31px] top-1.5 w-3.5 h-3.5 bg-accentTeal rounded-full border-2 border-white"></div>
                     <div class="flex justify-between items-baseline mb-1">
@@ -400,7 +420,7 @@
         </section>
 
         <!-- Send a Message Contact Section -->
-        <section id="contact" class="max-w-6xl mx-auto px-6 mb-16 fade-in-up">
+        <section id="contact" class="max-w-6xl mx-auto px-6 mb-16 reveal-up">
             <div class="bg-gradient-to-r from-slate-900 to-slate-800 rounded-2xl p-8 md:p-12 text-white flex flex-col md:flex-row justify-between items-center gap-8 shadow-lg">
                 <div>
                     <h2 class="text-2xl md:text-3xl font-bold mb-2">Send a Message</h2>
@@ -428,28 +448,33 @@
 
     <!-- Scripts -->
     <script>
-        // Scroll Intersection Observer
+        // Enhanced Multi-Directional Scroll Animation Observer
         document.addEventListener("DOMContentLoaded", function () {
-            const observerOptions = { threshold: 0.1 };
-            const observer = new IntersectionObserver((entries, observer) => {
+            const observerOptions = {
+                root: null,
+                rootMargin: "0px 0px -50px 0px",
+                threshold: 0.15
+            };
+
+            const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        observer.unobserve(entry.target);
+                        entry.target.classList.add('reveal-active');
+                    } else {
+                        // Optional: Re-trigger animation when scrolling up/down
+                        entry.target.classList.remove('reveal-active');
                     }
                 });
             }, observerOptions);
 
-            document.querySelectorAll('.fade-in-up').forEach(element => {
-                observer.observe(element);
-            });
+            const animatedElements = document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right');
+            animatedElements.forEach(el => observer.observe(el));
         });
 
-        // Mobile vs Desktop Smart Email Button Handler
+        // Smart Email Button Handler (Mobile Native Mailto / Desktop Clipboard Copy)
         function handleEmailClick(event) {
             const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
             
-            // If on PC / Desktop, prevent default mailto and copy email to clipboard
             if (!isMobile) {
                 event.preventDefault();
                 const email = 'arwisyah@gmail.com';
@@ -466,7 +491,6 @@
                     }, 3000);
                 });
             }
-            // On mobile, native mailto app opens as expected
         }
     </script>
 </body>
